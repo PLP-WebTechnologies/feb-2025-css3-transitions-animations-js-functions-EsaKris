@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Animation Studio</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="glass-container">
+        <header class="app-header">
+            <h1><i class="fas fa-shapes"></i> Shape Animator</h1>
+            <p class="subtitle">Bring shapes to life with beautiful animations</p>
+        </header>
+        
+        <div class="preferences-card card">
+            <div class="card-header">
+                <h2><i class="fas fa-user-cog"></i> User Preferences</h2>
+            </div>
+            <div class="card-body">
+                <div class="form-group floating">
+                    <input type="text" id="username" placeholder=" ">
+                    <label for="username">Username</label>
+                    <div class="underline"></div>
+                </div>
+                
+                <div class="form-group floating">
+                    <select id="theme" placeholder=" ">
+                        <option value=""></option>
+                        <option value="light">Light Theme</option>
+                        <option value="dark">Dark Theme</option>
+                        <option value="neon">Neon Theme</option>
+                        <option value="sunset">Sunset Theme</option>
+                    </select>
+                    <label for="theme">Theme</label>
+                    <div class="underline"></div>
+                </div>
+                
+                <div class="button-group">
+                    <button id="saveBtn" class="btn btn-primary">
+                        <span class="btn-content">Save Preferences</span>
+                        <span class="btn-icon"><i class="fas fa-save"></i></span>
+                    </button>
+                    <button id="resetBtn" class="btn btn-secondary">
+                        <span class="btn-content">Reset</span>
+                        <span class="btn-icon"><i class="fas fa-undo"></i></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="animation-card card">
+            <div class="card-header">
+                <h2><i class="fas fa-play-circle"></i> Animation Controls</h2>
+            </div>
+            <div class="card-body">
+                <div class="animation-controls">
+                    <button id="animateBtn" class="btn btn-accent">
+                        <span class="btn-content">Start Animation</span>
+                        <span class="btn-icon"><i class="fas fa-play"></i></span>
+                    </button>
+                    
+                    <div class="animation-options">
+                        <div class="option">
+                            <input type="radio" id="anim1" name="animation" value="float" checked>
+                            <label for="anim1">
+                                <div class="shape-preview circle"></div>
+                                Float
+                            </label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="anim2" name="animation" value="spin">
+                            <label for="anim2">
+                                <div class="shape-preview diamond"></div>
+                                Spin
+                            </label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="anim3" name="animation" value="wave">
+                            <label for="anim3">
+                                <div class="shape-preview square"></div>
+                                Wave
+                            </label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="anim4" name="animation" value="pulse">
+                            <label for="anim4">
+                                <div class="shape-preview star"></div>
+                                Pulse
+                            </label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="anim5" name="animation" value="swirl">
+                            <label for="anim5">
+                                <div class="shape-preview triangle"></div>
+                                Swirl
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="animatedElement" class="animated-box">
+                    <div class="box-content">
+                        <i class="fas fa-magic"></i>
+                        <span>Click Me!</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="particles-container" id="particles-js"></div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
